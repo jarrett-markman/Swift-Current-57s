@@ -68,3 +68,5 @@ def calculateRE(base1, base2, base3, outs):
             re24 = .570
         else:
             re24 = 0
+def RE24(ab_runs, post_re24, pre_re24):
+    re24 = post_re24 - pre_re24 + ab_runs
