@@ -1,0 +1,70 @@
+def calculateRE(base1, base2, base3, outs):
+    if base1 == 0 and base2 == 0 and base3 == 0:
+        if outs == 0:
+            re24 = .461
+        elif outs == 1:
+            re24 = .243
+        elif outs == 2:
+            re24 = .095
+        else:
+            re24 = 0
+    # runner on 1
+    elif base1 == 1 and base2 == 0 and base3 == 0:
+        if outs == 0:
+            re24 = .831
+        elif outs == 1:
+            re24 = .489
+        elif outs == 2:
+            re24 = .214
+        else:
+            re24 = 0
+    # runner on 2        
+    elif base1 == 0 and base2 == 1 and base3 == 0:
+        if outs == 0:
+            re24 = 1.068
+        elif outs == 1:
+            re24 = .644
+        elif outs == 2:
+            re24 = .305
+        else:
+            re24 = 0
+    # runner on 3
+    elif base1 == 0 and base2 == 0 and base3 == 1:
+        if outs == 0:
+            re24 = 1.426
+        elif outs == 1:
+            re24 = .865
+        elif outs == 2:
+            re24 = .413
+        else:
+            re24 = 0
+    # runner on 1 and 2
+    elif base1 == 1 and base2 == 1 and base3 == 0:
+        if outs == 0:
+            re24 = 1.373
+        elif outs == 1:
+            re24 = .908
+        elif outs == 2:
+            re24 = .343
+        else:
+            re24 = 0
+    # runner on 1 and 3
+    elif base1 == 1 and base2 == 0 and base3 == 1:
+        if outs == 0:
+            re24 = 1.798
+        elif outs == 1:
+            re24 = 1.140
+        elif outs == 2:
+            re24 = .471
+        else:
+            re24 = 0
+    # runner on 2 and 3
+    elif base1 == 0 and base2 == 1 and base3 == 1:
+        if outs == 0:
+            re24 = 1.920
+        elif outs == 1:
+            re24 = 1.352
+        elif outs == 2:
+            re24 = .570
+        else:
+            re24 = 0
