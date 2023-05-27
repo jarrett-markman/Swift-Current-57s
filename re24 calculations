@@ -1,0 +1,6626 @@
+# AB 1
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter1_ab1_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter1_ab1_re_24
+# AB 2
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter2_ab1_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter2_ab1_re_24
+# AB 3
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter3_ab1_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter3_ab1_re_24
+# AB 4
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter4_ab1_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter4_ab1_re_24
+# AB 5
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter5_ab1_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter5_ab1_re_24
+# AB 6
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter6_ab1_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter6_ab1_re_24
+# AB 7
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter7_ab1_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter7_ab1_re_24
+# AB 8
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter8_ab1_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter8_ab1_re_24
+# AB 9
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter9_ab1_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter9_ab1_re_24
+# AB 1, AB 2
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter1_ab2_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter1_ab2_re_24
+# AB 2, AB 2
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter2_ab2_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter2_ab2_re_24
+# AB 3, AB 2
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter3_ab2_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter3_ab2_re_24
+# AB 4, AB 2
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter4_ab2_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter4_ab2_re_24
+# AB 5, AB 2
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter5_ab2_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter5_ab2_re_24
+# AB 6, AB 2
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter6_ab2_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter6_ab2_re_24
+# AB 7, AB 2
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter7_ab2_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter7_ab2_re_24
+# AB 8, AB 2
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter8_ab2_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter8_ab2_re_24
+# AB 9, AB 2
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter9_ab2_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter9_ab2_re_24
+# AB 1, AB 3
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter1_ab3_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter1_ab3_re_24
+# AB 2, AB 3
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter2_ab3_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter2_ab3_re_24
+# AB 3, AB 3
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter3_ab3_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter3_ab3_re_24
+# AB 4, AB 3
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter4_ab3_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter4_ab3_re_24
+# AB 5, AB 3
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter5_ab3_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter5_ab3_re_24
+# AB 6, AB 3
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter6_ab3_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter6_ab3_re_24
+# AB 7, AB 3
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter7_ab3_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter7_ab3_re_24
+# AB 8, AB 3
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter8_ab3_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter8_ab3_re_24
+# AB 9, AB 3
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter9_ab3_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter9_ab3_re_24
+# AB 1, AB 4
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter1_ab4_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter1_ab4_re_24
+# AB 2, AB 4
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter2_ab4_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter2_ab4_re_24
+# AB 3, AB 4
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter3_ab4_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter3_ab4_re_24
+# AB 4, AB 4
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter4_ab4_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter4_ab4_re_24
+# AB 5, AB 4
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter5_ab4_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter5_ab4_re_24
+# AB 6, AB 4
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter6_ab4_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter6_ab4_re_24
+# AB 7, AB 4
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter7_ab4_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter7_ab4_re_24
+# AB 8, AB 4
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter8_ab4_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter8_ab4_re_24
+# AB 9, AB 4
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter9_ab4_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter9_ab4_re_24
+# AB 1, AB 5
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter1_ab5_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter1_ab5_re_24
+# AB 2, AB 5
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter2_ab5_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter2_ab5_re_24
+# AB 3, AB 5
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter3_ab5_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter3_ab5_re_24
+# AB 4, AB 5
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter4_ab5_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter4_ab5_re_24
+# AB 5, AB 5
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter5_ab5_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter5_ab5_re_24
+# AB 6, AB 5
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter6_ab5_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter6_ab5_re_24
+# AB 7, AB 5
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter7_ab5_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter7_ab5_re_24
+# AB 8, AB 5
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter8_ab5_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter8_ab5_re_24
+# AB 9, AB 5
+# For base results, use a 0 or 1 binary indicator variable for if the base is occupied or not
+# Base results before the at bat
+pre_base1 = float(input("Pre-AB Base 1: ")) 
+pre_base2 = float(input("Pre-AB Base 2: "))
+pre_base3 = float(input("Pre-AB Base 3: "))
+pre_outs = float(input("Pre-AB Outs: "))
+# Base results after the at bat
+post_base1 = float(input("Post-AB Base 1: ")) 
+post_base2 = float(input("Post-AB Base 2: "))
+post_base3 = float(input("Post-AB Base 3: "))
+post_outs = float(input("Post-AB Outs: "))
+# Runs scored on the play
+post_runs_scored = float(input("Post-AB runs scored: "))
+# if statements for each possible re24 value
+# Pre at bat RE24
+# empty
+if pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .461
+    elif pre_outs == 1:
+        pre_re24 = .243
+    else:
+        pre_re24 = .095
+# runner on 1
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = .831
+    elif pre_outs == 1:
+        pre_re24 = .489
+    else:
+        pre_re24 = .214
+# runner on 2        
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.068
+    elif pre_outs == 1:
+        pre_re24 = .644
+    else:
+        pre_re24 = .305
+# runner on 3
+elif pre_base1 == 0 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.426
+    elif pre_outs == 1:
+        pre_re24 = .865
+    else:
+        pre_re24 = .413
+# runner on 1 and 2
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 0:
+    if pre_outs == 0:
+        pre_re24 = 1.373
+    elif pre_outs == 1:
+        pre_re24 = .908
+    else:
+        pre_re24 = .343
+# runner on 1 and 3
+elif pre_base1 == 1 and pre_base2 == 0 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.798
+    elif pre_outs == 1:
+        pre_re24 = 1.140
+    else:
+        pre_re24 = .471
+# runner on 2 and 3
+elif pre_base1 == 0 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 1.920
+    elif pre_outs == 1:
+        pre_re24 = 1.352
+    else:
+        pre_re24 = .570
+# loaded
+elif pre_base1 == 1 and pre_base2 == 1 and pre_base3 == 1:
+    if pre_outs == 0:
+        pre_re24 = 2.282
+    elif pre_outs == 1:
+        pre_re24 = 1.520
+    else:
+        pre_re24 = .736
+# Post at bat RE24
+# empty
+if post_base1 == 0 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .461
+    elif post_outs == 1:
+        post_re24 = .243
+    else:
+        post_re24 = .095
+# runner on 1
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = .831
+    elif post_outs == 1:
+        post_re24 = .489
+    else:
+        post_re24 = .214
+# runner on 2        
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.068
+    elif post_outs == 1:
+        post_re24 = .644
+    else:
+        post_re24 = .305
+# runner on 3
+elif post_base1 == 0 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.426
+    elif post_outs == 1:
+        post_re24 = .865
+    else:
+        post_re24 = .413
+# runner on 1 and 2
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 0:
+    if post_outs == 0:
+        post_re24 = 1.373
+    elif post_outs == 1:
+        post_re24 = .908
+    else:
+        post_re24 = .343
+# runner on 1 and 3
+elif post_base1 == 1 and post_base2 == 0 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.798
+    elif post_outs == 1:
+        post_re24 = 1.140
+    else:
+        post_re24 = .471
+# runner on 2 and 3
+elif post_base1 == 0 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 1.920
+    elif post_outs == 1:
+        post_re24 = 1.352
+    else:
+        post_re24 = .570
+# loaded
+elif post_base1 == 1 and post_base2 == 1 and post_base3 == 1:
+    if post_outs == 0:
+        post_re24 = 2.282
+    elif post_outs == 1:
+        post_re24 = 1.520
+    else:
+        post_re24 = .736
+batter9_ab5_re_24 = post_re24 - pre_re24 + post_runs_scored
+batter9_ab5_re_24
+# aggregate all re24 values in the game
+# may not have this many at bats, just what should basically be coded
+batter1 = batter1_ab1_re_24 + batter1_ab2_re_24 + batter1_ab3_re_24 + batter1_ab4_re_24 + batter1_ab5_re_24
+batter2 = batter2_ab1_re_24 + batter2_ab2_re_24 + batter2_ab3_re_24 + batter2_ab4_re_24 + batter2_ab5_re_24
+batter3 = batter3_ab1_re_24 + batter3_ab2_re_24 + batter3_ab3_re_24 + batter3_ab4_re_24 + batter3_ab5_re_24
+batter4 = batter4_ab1_re_24 + batter4_ab2_re_24 + batter4_ab3_re_24 + batter4_ab4_re_24 + batter4_ab5_re_24
+batter5 = batter5_ab1_re_24 + batter5_ab2_re_24 + batter5_ab3_re_24 + batter5_ab4_re_24 + batter5_ab5_re_24
+batter6 = batter6_ab1_re_24 + batter6_ab2_re_24 + batter6_ab3_re_24 + batter6_ab4_re_24 + batter6_ab5_re_24
+batter7 = batter7_ab1_re_24 + batter7_ab2_re_24 + batter7_ab3_re_24 + batter7_ab4_re_24 + batter7_ab5_re_24
+batter8 = batter8_ab1_re_24 + batter8_ab2_re_24 + batter8_ab3_re_24 + batter8_ab4_re_24 + batter8_ab5_re_24
+batter9 = batter9_ab1_re_24 + batter9_ab2_re_24 + batter9_ab3_re_24 + batter9_ab4_re_24 + batter9_ab5_re_24
