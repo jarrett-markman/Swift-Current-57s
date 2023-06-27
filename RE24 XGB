@@ -1,6 +1,7 @@
 library(tidyverse)
 library(readxl)
 library(xgboost)
+set.seed(1234)
 
 # load in the excel files
 contact_22 <- read_excel("contact-1.xlsx")
