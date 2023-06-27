@@ -1,0 +1,84 @@
+library(tidyverse)
+library(readxl)
+library(xgboost)
+
+# load in the excel files
+contact_22 <- read_excel("contact-1.xlsx")
+qabs_22 <- read_excel("qabs-1.xlsx")
+re_22 <- read_excel("re-1.xlsx")
+stats_22 <- read_excel("stats-1.xlsx")
+
+# join re file with the other excel files
+data_22 <- re_22 %>%
+  left_join(contact_22, by = "Player") %>%
+  left_join(qabs_22, by = "Player")
+# separate the "Player" column in order to join the two dfs
+stats_full <- stats_22 %>%
+  separate(Player, c("Last", "First_I"), ", ", F)
+# Separate the "Player" column  to join with the prior data set
+dat_22 <- data_22 %>%
+  separate(Player, c("First", "Last"), " ", F) %>%
+  left_join(stats_full, by = "Last")
+
+# Thin the data set and select variables
+model_data <- dat_22 %>%
+  select(player = Player.x, pa = PA.x, avg = AVG, obp = OBP, slg = SLG, ops = OPS, 
+         qab_pct = `QAB%`, qabs = `QAB'S`, re_24 = RE24, 
+         contact_2_strikes = `Contact with 2 strikes`, 
+         hit_into_play_2_strikes = `Hit into play with 2 Strikes`)
+
+# Create a data matrix
+train <- model_data %>%
+  select(-c(player, re_24)) %>%
+  as.matrix() %>%
+  xgb.DMatrix(label = model_data$re_24)
+
+# Create an xg boost model for the data
+# Hard code in the eta, rounds, and depth due to not having enough observations for training/testing
+model <- xgboost(
+  data = train,
+  objective = "reg:squarederror",
+  eval_metric = "rmse",
+  eta = .2,
+  nrounds = 100,
+  early_stopping_rounds = 10,
+  max_depth = 6
+)
+
+# load in excel files for this year
+contact_23 <- read_excel("contact+1.xlsx")
+qabs_23 <- read_excel("qabs+1.xlsx")
+re_23 <- read_excel("re+1.xlsx")
+stats_23 <- read_excel("stats+1.xlsx")
+
+# join re file with other excel files
+data_23 <- re_23 %>%
+  left_join(contact_23, by = "Player") %>%
+  left_join(qabs_23, by = "Player")
+# separate the "Player" column in order to join the two dfs
+stats_23_full <- stats_23 %>%
+  separate(Player, c("Last", "First_I"), ", ", F)
+# Separate the "Player" column  to join with the prior data set
+dat_23 <- data_23 %>%
+  separate(Player, c("First", "Last"), " ", F) %>%
+  left_join(stats_23_full, by = "Last")
+
+# Thin the data set and select variables
+model_data_2 <- dat_23 %>%
+  select(player = Player.x, pa = PA.x, avg = AVG, obp = OBP, slg = SLG, ops = OPS, 
+         qab_pct = `QAB%`, qabs = `QAB'S`, re_24 = RE24, 
+         contact_2_strikes = `Contact with 2 strikes`, 
+         hit_into_play_2_strikes = `Hit into play with 2 Strikes`)
+
+# Create a new data frame for predicting data 
+prediction_data <- model_data_2 %>%
+  select(-c(player, re_24)) %>%
+  as.matrix() %>%
+  xgb.DMatrix(label = model_data_2$re_24)
+
+# Predict the values for 
+predicted_values <- predict(model, prediction_data)
+
+combined_preds <- cbind(re_23, predicted_values)
+
+write.csv(combined_preds, "XGB Predicted RE24")
